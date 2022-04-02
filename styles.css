@@ -301,5 +301,6 @@ input[type=submit]:hover {
 } */
 
 
-
+.flex {max-width: 100%}
+/* COMANDO PER RENDERE FLESSIBILI LE IMMAGINI CHE VOGLIO */
 
