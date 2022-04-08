@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <style>
+
+/* label.required strong, strong.asterisco{
+    font-family: Verdana,Arial,sans-serif;color: red} */
+
+    .required:after {
+	content: '*';
+	font-weight: bold;
+	color: #c00;
+	margin-left: 0.3em;
+}
+
+
 body {
-    background: linear-gradient(-45deg, #e7d9d5a5, rgb(195, 191, 191), #a2acae, #9db9b2);
+    background: linear-gradient(-45deg, #ede2dea5, rgb(211, 205, 205), #d4dadb, #ced7d5);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -151,6 +163,7 @@ input[type='text'], [type='email'], select, textarea {
   letter-spacing: 1px;
 	margin: 0em 0 1.875em 0;
 	padding: 0 0 0.875em 0;
+  /* text-transform: uppercase; */
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -293,7 +306,7 @@ textarea {
 <body>
 
 <div align="left">
-<p style="margin-letf:1cm; margin-bottom:-0.5cm; margin-top:0.5cm;">
+<p style="margin-left:1cm; margin-bottom: -0.5cm; margin-top:0.5cm;">
 <a href="https://n-balducci.github.io/n.balducci-personal-website/" type="button", class="btn btn-secondary"><b><i><FONT face="Verdana">Homepage</FONT></i></b>
 </a>
 </p>                 
@@ -312,11 +325,11 @@ textarea {
 <form   action="https://formspree.io/f/mwkyngqz"
 method="POST">
 <div class="name">
-    <label for="name"></label>
+    <label for="name" class="required"></label>
     <input type="text" placeholder="Name" name="name" id="name_input" required>
   </div>
   <div class="email">
-    <label for="email"></label>
+    <label for="email" class="required"></label>
     <input type="email" placeholder="Email Address" name="email" id="email_input" required>
   </div>
   <div class="telephone">
@@ -324,7 +337,7 @@ method="POST">
     <input type="text" placeholder="Phone Number" name="telephone">
   </div>
   <div class="subject">
-    <label for="subject"></label>
+    <label for="subject" class="required"></label>
     <select placeholder="Subject line" name="subject" id="subject_input" required>
       <option disabled hidden selected>Subject</option>
       <option>I'd like to start a project</option>
@@ -333,7 +346,7 @@ method="POST">
     </select>
   </div>
   <div class="message">
-    <label for="message"></label>
+    <label for="message" class="required"></label>
     <textarea name="message" placeholder="Write something" id="message_input" cols="30" rows="5" required></textarea>
   </div>
   <div class="submit">
